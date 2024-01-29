@@ -33,7 +33,7 @@ __Exam Sections__
     - Remember that s2i repositories have a __hidden s2i folder (.s2i)__. You can check for them with ```ls -a```. Know how to customize the assemble/run scripts within, similar to dockerfiles (.s2i/bin)
     - [S2I in RHOCP docs](https://docs.openshift.com/container-platform/4.6/openshift_images/create-images.html#images-create-s2i_create-images)
 5. __Using Openshift ConfigMaps and Secrets__
-    - Chapter 2
+    - Chapter 2 DO288 v4.10
     - Know how to create a configmap using CLI or web console
     - Applying a configmap to an application is referring to setting env/secrets/etc from configmaps, not just creating the cm within the project
     - Oc set env|secret dc/{dc name} --from cm/{cm name}
