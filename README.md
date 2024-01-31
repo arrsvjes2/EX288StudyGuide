@@ -18,21 +18,30 @@ __General tips__
 
 __Exam Sections__
 
-1. __Application Deployment__
-    - Chapter 1 and 6
+1. __Application Deployment__   OK
+    - Chapter 1 and 2 DO288 
     - What you learned in DO180 is also quite useful here
     - Be able to deploy apps with both the CLI and web console
-2. __Maintenance__
+    - lab start deploy-review
+
+2. __Work with container images__ 
+
+3. __Work with image streams__ OK
+    - DO288 chapter 3
+    - lab start images-review
+
+4. __Maintenance__
     - Fairly general title, so this can cover a wide variety of topics. __Be comfortable with searching through the docs__
-3. __Troubleshooting__
+5. __Troubleshooting__
     - Chapter 1.8
     - DO180 v4.6 Chapter 8 for more depth + guided exercises + lab
     - Easiest to identify errors/check logs/etc in the web console. Fixing the errors varies.
-4. __Customizing Dockerfiles and S2I Builder Images__
+6. __ Work with the source-to-image (S2I) framework__ OK
     - Chapter 5
     - Remember that s2i repositories have a __hidden s2i folder (.s2i)__. You can check for them with ```ls -a```. Know how to customize the assemble/run scripts within, similar to dockerfiles (.s2i/bin)
+    - lab start builds-review
     - [S2I in RHOCP docs](https://docs.openshift.com/container-platform/4.6/openshift_images/create-images.html#images-create-s2i_create-images)
-5. __Using Openshift ConfigMaps and Secrets__ OK
+7. __Using Openshift ConfigMaps and Secrets__ OK
     - Chapter 2 DO288 v4.10 Section 2.5: Injecting Configuration Data into an Application
     - lab app-config start
     - Know how to create a configmap using CLI or web console
@@ -40,17 +49,17 @@ __Exam Sections__
     - Oc set env|secret dc/{dc name} --from cm/{cm name}
     - [ConfigMaps in RHOCP docs](https://docs.openshift.com/container-platform/4.6/authentication/configmaps.html)
     - Can be done with CLI or web console
-6. __Implementing Hooks and Triggers__
-    - Chapter 4
+8. __Implementing Hooks and Triggers__
+    - Chapter 4 DO288 v4.12
     - [Openshift Hooks/Triggers in RHOCP docs](https://docs.openshift.com/container-platform/4.6/builds/triggering-builds-build-hooks.html)
     - Easiest in web console
-7. __Working with Templates__ OK
+9. __Working with Templates__ OK
     - DO280 Chapter 2 __VERSION 4.12__
     - DO288 Version 4.12 does not provide enough template content in my opinion
     - Be able to edit/troubleshoot templates, load them into openshift, then create an application using that template
     - Understand parameters and their different fields (name, description, value, required, etc)
     - [Templates in RHOCP docs](https://docs.openshift.com/container-platform/4.6/openshift_images/using-templates.html#templates-uploading_using-templates)
-8. __Application Health Monitoring__
+10. __Application Health Monitoring__
     - Chapters 7.1, 7.2
     - Very easy in web console
     - [Health checks using the developer perspective in RHOCP docs](https://docs.openshift.com/container-platform/4.6/applications/application-health.html#odc-adding-health-checks)
