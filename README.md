@@ -139,3 +139,6 @@ __Exam Taking Tips__
   people don’t. And if you don’t have any retakes available for whatever reason,
   you can take a different version of the exam (until they remove it on
   10/1/2021).
+
+  a) Create two routes http and https for a simple service.
+  b) health check, startup, liveness, readiness
