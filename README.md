@@ -140,5 +140,8 @@ __Exam Taking Tips__
   you can take a different version of the exam (until they remove it on
   10/1/2021).
 
-  a) Create two routes http and https for a simple service.
-  b) health check, startup, liveness, readiness
+- Create two routes http and https for a simple service.
+  oc create route edge hello --insecure-policy=Allow --service=hello
+- health check, startup, liveness, readiness
+- ADD with option chmod, from http server.
+- Four Templates: app-backend-build, app-backend-deploy, app-frontend-build, app-backend-deploy, add parameter REGISTRY_URL in templates build.
