@@ -140,9 +140,25 @@ __Exam Taking Tips__
   you can take a different version of the exam (until they remove it on
   10/1/2021).
 
+__Tips__
 - Create two routes http and https for a simple service.
 
   oc create route edge hello --insecure-policy=Allow --service=hello
 - health check, startup, liveness, readiness
 - ADD with option chmod, from http server, practice with image base ubi9-micro.
+
+  Containerfile
+
+  FROM registry.access.redhat.com/ubi9-micro:9.3-13
+
+  ARG ARTIFACT=http://192.168.122.82/nproc
+
+  RUN mkdir /app
+
+  ADD --chmod=755 $ARTIFACT /app
+
+  Build image:
+
+  podman build --build-arg ARTIFACT=http://192.168.122.82/zcat  -t postal .
+
 - Four Templates: app-backend-build, app-backend-deploy, app-frontend-build, app-backend-deploy, add parameter REGISTRY_URL in templates build.
