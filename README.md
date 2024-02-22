@@ -141,7 +141,8 @@ __Exam Taking Tips__
   10/1/2021).
 
 - Create two routes http and https for a simple service.
+
   oc create route edge hello --insecure-policy=Allow --service=hello
 - health check, startup, liveness, readiness
-- ADD with option chmod, from http server.
+- ADD with option chmod, from http server, practice with image base ubi9-micro.
 - Four Templates: app-backend-build, app-backend-deploy, app-frontend-build, app-backend-deploy, add parameter REGISTRY_URL in templates build.
