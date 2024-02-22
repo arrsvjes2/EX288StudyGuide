@@ -162,3 +162,5 @@ __Tips__
   podman build --build-arg ARTIFACT=http://192.168.122.82/zcat  -t postal .
 
 - Four Templates: app-backend-build, app-backend-deploy, app-frontend-build, app-backend-deploy, add parameter REGISTRY_URL in templates build.
+- helms
+- pipelines
