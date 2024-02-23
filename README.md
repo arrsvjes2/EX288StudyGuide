@@ -145,6 +145,16 @@ __Tips__
 
   oc create route edge hello --insecure-policy=Allow --service=hello
 - health check, startup, liveness, readiness
+
+  secret postgresql
+
+  database-name: POSTGRESQL_DATABASE
+  
+  database-password: POSTGRESQL_PASSWORD
+
+  database-user:     POSTGRESQL_USER
+
+  volume postgres-pvc
 - ADD with option chmod, from http server, practice with image base ubi9-micro.
 
   Containerfile
