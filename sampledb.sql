@@ -31,7 +31,7 @@ COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
 --
--- Name: gen_random_uuid(); Type: FUNCTION; Schema: public; Owner: userBOP
+-- Name: gen_random_uuid(); Type: FUNCTION; Schema: public; Owner: user2222
 --
 
 CREATE FUNCTION public.gen_random_uuid() RETURNS uuid
@@ -39,14 +39,14 @@ CREATE FUNCTION public.gen_random_uuid() RETURNS uuid
     AS $$ SELECT md5(random()::text || clock_timestamp()::text)::uuid $$;
 
 
-ALTER FUNCTION public.gen_random_uuid() OWNER TO "userBOP";
+ALTER FUNCTION public.gen_random_uuid() OWNER TO "user2222";
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: associate; Type: TABLE; Schema: public; Owner: userBOP
+-- Name: associate; Type: TABLE; Schema: public; Owner: user2222
 --
 
 CREATE TABLE public.associate (
@@ -55,10 +55,10 @@ CREATE TABLE public.associate (
 );
 
 
-ALTER TABLE public.associate OWNER TO "userBOP";
+ALTER TABLE public.associate OWNER TO "user2222";
 
 --
--- Name: associate_seq; Type: SEQUENCE; Schema: public; Owner: userBOP
+-- Name: associate_seq; Type: SEQUENCE; Schema: public; Owner: user2222
 --
 
 CREATE SEQUENCE public.associate_seq
@@ -69,10 +69,10 @@ CREATE SEQUENCE public.associate_seq
     CACHE 1;
 
 
-ALTER TABLE public.associate_seq OWNER TO "userBOP";
+ALTER TABLE public.associate_seq OWNER TO "user2222";
 
 --
--- Name: expense; Type: TABLE; Schema: public; Owner: userBOP
+-- Name: expense; Type: TABLE; Schema: public; Owner: user2222
 --
 
 CREATE TABLE public.expense (
@@ -87,10 +87,10 @@ CREATE TABLE public.expense (
 );
 
 
-ALTER TABLE public.expense OWNER TO "userBOP";
+ALTER TABLE public.expense OWNER TO "user2222";
 
 --
--- Name: expense_seq; Type: SEQUENCE; Schema: public; Owner: userBOP
+-- Name: expense_seq; Type: SEQUENCE; Schema: public; Owner: user2222
 --
 
 CREATE SEQUENCE public.expense_seq
@@ -101,10 +101,10 @@ CREATE SEQUENCE public.expense_seq
     CACHE 1;
 
 
-ALTER TABLE public.expense_seq OWNER TO "userBOP";
+ALTER TABLE public.expense_seq OWNER TO "user2222";
 
 --
--- Name: hibernate_sequence; Type: SEQUENCE; Schema: public; Owner: userBOP
+-- Name: hibernate_sequence; Type: SEQUENCE; Schema: public; Owner: user2222
 --
 
 CREATE SEQUENCE public.hibernate_sequence
@@ -115,10 +115,10 @@ CREATE SEQUENCE public.hibernate_sequence
     CACHE 1;
 
 
-ALTER TABLE public.hibernate_sequence OWNER TO "userBOP";
+ALTER TABLE public.hibernate_sequence OWNER TO "user2222";
 
 --
--- Data for Name: associate; Type: TABLE DATA; Schema: public; Owner: userBOP
+-- Data for Name: associate; Type: TABLE DATA; Schema: public; Owner: user2222
 --
 
 COPY public.associate (id, name) FROM stdin;
@@ -128,7 +128,7 @@ COPY public.associate (id, name) FROM stdin;
 
 
 --
--- Data for Name: expense; Type: TABLE DATA; Schema: public; Owner: userBOP
+-- Data for Name: expense; Type: TABLE DATA; Schema: public; Owner: user2222
 --
 
 COPY public.expense (amount, paymentmethod, associate_id, creationdate, id, name, uuid) FROM stdin;
@@ -166,28 +166,28 @@ COPY public.expense (amount, paymentmethod, associate_id, creationdate, id, name
 
 
 --
--- Name: associate_seq; Type: SEQUENCE SET; Schema: public; Owner: userBOP
+-- Name: associate_seq; Type: SEQUENCE SET; Schema: public; Owner: user2222
 --
 
 SELECT pg_catalog.setval('public.associate_seq', 1, false);
 
 
 --
--- Name: expense_seq; Type: SEQUENCE SET; Schema: public; Owner: userBOP
+-- Name: expense_seq; Type: SEQUENCE SET; Schema: public; Owner: user2222
 --
 
 SELECT pg_catalog.setval('public.expense_seq', 1, false);
 
 
 --
--- Name: hibernate_sequence; Type: SEQUENCE SET; Schema: public; Owner: userBOP
+-- Name: hibernate_sequence; Type: SEQUENCE SET; Schema: public; Owner: user2222
 --
 
 SELECT pg_catalog.setval('public.hibernate_sequence', 30, true);
 
 
 --
--- Name: associate associate_pkey; Type: CONSTRAINT; Schema: public; Owner: userBOP
+-- Name: associate associate_pkey; Type: CONSTRAINT; Schema: public; Owner: user2222
 --
 
 ALTER TABLE ONLY public.associate
@@ -195,7 +195,7 @@ ALTER TABLE ONLY public.associate
 
 
 --
--- Name: expense expense_pkey; Type: CONSTRAINT; Schema: public; Owner: userBOP
+-- Name: expense expense_pkey; Type: CONSTRAINT; Schema: public; Owner: user2222
 --
 
 ALTER TABLE ONLY public.expense
@@ -203,7 +203,7 @@ ALTER TABLE ONLY public.expense
 
 
 --
--- Name: expense fkroeyodwy4mwgru0y3pfvvk0u7; Type: FK CONSTRAINT; Schema: public; Owner: userBOP
+-- Name: expense fkroeyodwy4mwgru0y3pfvvk0u7; Type: FK CONSTRAINT; Schema: public; Owner: user2222
 --
 
 ALTER TABLE ONLY public.expense
