@@ -167,6 +167,9 @@ __Tips__
 
   ADD --chmod=755 $ARTIFACT /app
 
+Add example with application source code in language go. practice new-app, use s2i custom, for add environment variable SERVER=8001.
+
+
   Build image:
 
   podman build --build-arg ARTIFACT=http://192.168.122.82/zcat  -t postal .
